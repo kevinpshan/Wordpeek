@@ -20,12 +20,13 @@
                 }
                 
                 const data = await response.json();
+                const parsedData = JSON.parse(data.contents);
                 
-                // Assuming the endpoint returns an object with a 'query' field
-                const searchQuery = data.query;
-
+                // Assuming the endpoint returns an object with a 'value' field
+                const value = parsedData.value;
+                
                 // Redirect to Google search with the retrieved words
-                const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+                const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(value)}`;
                 window.location.href = googleSearchURL;
 
             } catch (error) {
