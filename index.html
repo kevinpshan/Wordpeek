@@ -11,7 +11,7 @@
             try {
                 // Replace this URL with your endpoint, prefixed with the CORS Anywhere proxy
                 const corsAnywhere = 'https://api.allorigins.win/get?url=';
-                const urlEndpoint = corsAnywhere + encodeURIComponent("https://wkt.pw/b/L5rG4oYCdI");
+                const urlEndpoint = corsAnywhere + encodeURIComponent("https://wkt.pw/b/L5rG4oYCdI") + '&cacheBuster=' + new Date().getTime();
                 
                 // Fetch data from the endpoint
                 const response = await fetch(urlEndpoint);
