@@ -22,7 +22,7 @@
                 const data = await response.json();
                 
                 // Assuming the endpoint returns an object with a 'query' field
-                const searchQuery = data.value;
+                const searchQuery = data.query;
 
                 // Redirect to Google search with the retrieved words
                 const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
